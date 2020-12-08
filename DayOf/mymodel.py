@@ -32,7 +32,8 @@ class MediumModel(object):
         # train model here
         pass
 
-    def predict(self, prev_price, x1, x2, x3):
+    @staticmethod
+    def predict(prev_price, x1, x2, x3):
         return prev_price
 
 class HardModel(object):
@@ -44,7 +45,8 @@ class HardModel(object):
         # train model here
         pass
 
-    def predict(self, price_history, x1, x2, x3):
+    @staticmethod
+    def predict(price_history, x1, x2, x3):
         # note price history is the previous 50 prices with most recent prev_price last
         #   and x1, x2, x3 are still single values
         return price_history[-1]
