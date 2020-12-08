@@ -67,7 +67,8 @@ class AlgoBot(TradersBot):
     def onAckModifyOrders(self, msg, order):
         pass
 
-    def onNews(self, msg, order):
+    @staticmethod
+    def onNews(msg, order):
         try:
             news = msg['news']
             headline = news['headline']
